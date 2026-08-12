@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sadeeqofzazzau</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6366f1">
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">sadeeqofzazzau</h1>
+    <nav>
+      <a href="index.html">Gida</a>
+      <a href="login.html" id="login-btn">Shiga</a>
+      <a href="chat.html" id="chat-btn" style="display:none;">Chat</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Assalamu Alaikum</h2>
+    <p>Maraba da zuwa personal website na. <br> Turo min sako kai tsaye ta chat.</p>
+    <button onclick="location.href='signup.html'">Fara Tattaunawa</button>
+  </section>
+  <footer><p>© 2026 sadeeqofzazzau</p></footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
+    auth.onAuthStateChanged(user => {
+      if(user){ document.getElementById('login-btn').style.display = 'none'; document.getElementById('chat-btn').style.display = 'inline'; }
+    });
+  </script>
+</body>
+</html>
